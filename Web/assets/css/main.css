@@ -1,0 +1,27 @@
+#m-result {
+    width: 100px;
+}
+
+/*#m-result2 {
+    filter: contrast(200%) invert(100%);
+}*/
+
+#img-canvas {
+    width: 90%;
+}
+
+.main-panel {
+    float: none;
+    width: auto;
+}
+
+body{
+    background: #6441A5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+h1{
+    color: azure;
+}

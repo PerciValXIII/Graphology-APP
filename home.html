@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="home.css">
+   <title>Know Yourself</title>
+</head>
+<body >
+
+  <!-- NAVBAR -->
+  <nav class="z-depth-0 deep-purple darken-2">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">
+       Know Yourself
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="logged-in" >
+            <a href="#" class="white-text modal-trigger" data-target="modal-account">Account</a>
+          </li>
+          <li class="logged-in" >
+            <a href="#" class="white-text" id="logout">Logout</a>
+          </li>
+          <li class="logged-out" >
+            <a href="#" class="white-text modal-trigger" data-target="modal-login">Login</a>
+          </li>
+          <li class="logged-out" >
+            <a href="#" class="white-text modal-trigger" data-target="modal-signup">Sign up</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  
+
+  <!-- SIGN UP MODAL -->
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose password</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="signup-bio" required />
+          <label for="signup-bio">One Line Bio</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+      </form>
+    </div>
+  </div>
+
+   <!-- LOGIN MODAL -->
+   <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Your password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ACCOUNT MODAL -->
+  <div id="modal-account" class="modal">
+    <div class="modal-content center-align">
+      <h4>Account details</h4><br />
+      <div class="account-details"></div>
+    </div>
+  </div>
+
+
+<div class="container ">
+  <div class="logged-out middle">
+  <h3>WANT TO KNOW YOUR PERSONALITY ?</h3>
+  <a href="#" class="clickme modal-trigger" data-target="modal-login">Login</a>
+</div>
+ <div class="middle logged-in">
+   <h3>Make a Choice</h3>
+  <a href="./Quiz/personality-quiz.html" class="clickme">QUIZ</a>
+  <br>
+  <a href="./Web/index.html" class="clickme">APP</a>
+</div>
+</div>
+
+
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAvk5HlSfdIGyu3K3DC4PN_mhBrE4iCAzo",
+    authDomain: "graphology-app-70fc2.firebaseapp.com",
+    databaseURL: "https://graphology-app-70fc2.firebaseio.com",
+    projectId: "graphology-app-70fc2",
+    appId: "1:266410369334:web:cd50af3e524b00f22f9397"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+</script>
+  
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+</html>
